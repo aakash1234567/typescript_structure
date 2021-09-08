@@ -35,15 +35,61 @@ export class Employee implements IEmployee {
   };
 }
 
+interface IClock {
+  date: Date;
+}
+export class Clock implements IClock {
+  date: Date;
+  constructor() {
+    this.date = new Date();
+  }
+  public datenow = () => {
+    return `It is ${this.date}`;
+  };
+}
+
+interface IVehicle {
+  model: string;
+  name: string;
+  type: string;
+  price: number;
+  getPlateNo: () => number;
+  setPlateNo: (arg0: number) => void;
+}
+export class Vehicle implements IVehicle {
+  model: string;
+  name: string;
+  type: string;
+  price: number;
+  private _plateNo!: number;
+  constructor(mod: string, name: string, type: string, price: number) {
+    this.model = mod;
+    this.name = name;
+    this.type = type;
+    this.price = price;
+  }
+
+  getPlateNo = (): number => {
+    return this._plateNo;
+  };
+  setPlateNo = (value: number) => {
+    this._plateNo = value;
+  };
+}
 ////////////////////////////IMPLEMENTATION///////////////////////////////////
-// import { Employee } from "./testing";
+// import { Employee, Clock, Vehicle } from "./testing";
 // function App() {
-//   let emp = new Employee(1, "Aakash", 20000, 21);
-//   emp.setPhone(99999999999);
-//   console.log(emp.getPhone());
-//   console.log(emp.descp());
-//   // console.log(emp._phone);
-//   console.log(emp.name);
+// let emp = new Employee(1, "Steve", 20000, 21);
+// emp.setPhone(99999999999);
+// console.log(emp.getPhone());
+// console.log(emp.descp());
+// // console.log(emp._phone);
+// console.log(emp.name);
+// let clk = new Clock();
+// console.log(clk.datenow());
+// let vehicle = new Vehicle("suzuki", "Steve", "car", 2100000);
+// vehicle.setPlateNo(8853);
+// console.log(vehicle.getPlateNo());
 //   return (
 //     <>
 //     </>
