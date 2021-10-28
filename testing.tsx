@@ -1,6 +1,3 @@
-// Example typescript file for creating module
-
-// interface for Employee class
 interface IEmployee {
   empCode: number;
   name: string;
@@ -38,7 +35,6 @@ export class Employee implements IEmployee {
   };
 }
 
-// interface for Clock class
 interface IClock {
   date: Date;
 }
@@ -52,7 +48,6 @@ export class Clock implements IClock {
   };
 }
 
-// interface for Vehicle class
 interface IVehicle {
   model: string;
   name: string;
