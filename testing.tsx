@@ -1,3 +1,6 @@
+// Example typescript file for demonstration of node module
+
+// Employee class interface
 interface IEmployee {
   empCode: number;
   name: string;
@@ -35,6 +38,7 @@ export class Employee implements IEmployee {
   };
 }
 
+// Clock class interface
 interface IClock {
   date: Date;
 }
@@ -48,6 +52,7 @@ export class Clock implements IClock {
   };
 }
 
+// Vehicle class interface
 interface IVehicle {
   model: string;
   name: string;
